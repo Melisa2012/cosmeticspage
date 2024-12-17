@@ -1,0 +1,191 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+
+nav ul li {
+    margin: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff008c;
+}
+
+header {
+    height: 100vh;
+    background: url('nature.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 4rem;
+    animation: melisa 2s ease-in-out;
+}
+
+header h1 span {
+    color: #ff008c;
+    display: inline-block;
+}
+
+
+
+
+header h1 span::before {
+    content: '👋'; /* Add a wave emoji using pseudoelement */
+    position: absolute;
+    left: -30px;
+    animation: wave 2s infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+/* Animations */
+@keyframes melisa {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 850px){
+    body {
+        margin: 10;
+        padding: 10;
+        font-family: Arial, sans-serif;
+        height: 100%;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        margin: 10;
+        padding: 10;
+        color: rgb(209, 194, 194);
+        background-color: rgb(41, 41, 41);
+    }
+    
+    nav ul li {
+        margin: 20px;
+    }
+    
+    nav ul li a {
+        color: rgb(255, 230, 230);
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.5s ease;
+    }
+    
+    nav ul li a:hover {
+        color: #aa487e;
+    }
+    
+    header {
+        height: 100vh;
+        background: url('nature.jpg') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(184, 180, 180);
+        text-shadow: 2px 2px 5px rgba(29, 29, 29, 0.7);
+    }
+    
+    header h1 {
+        font-size: 5rem;
+        animation: melisa 3s ease-in-out;
+    }
+    
+    header h1 span {
+        color: #461831;
+        display: inline-block;
+    }
+    
+    
+    
+    
+    header h1 span::before {
+        content: '👋'; /* Add a wave emoji using pseudoelement */
+        position: absolute;
+        left: -25px;
+        animation: wave 2s infinite;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes wave {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        50% {
+            transform: rotate(30deg);
+        }
+    }
+    
+    /* Animations */
+    @keyframes melisa {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+}
